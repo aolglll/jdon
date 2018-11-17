@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var arr = [8, 2, 3, 4, 5, 6, 9]
+
+    function element(arr) {
+        var a = 0;
+        var j = 0;
+        var p = arr[0]
+
+
+        for (var i = 0; i < arr.length; i++) {
+            a += arr[i];
+
+            if (j < arr[i]) {
+                j = arr[i]
+            }
+            var min = arr[i]
+
+
+            if (p > min) {
+                p = min
+            }
+        }
+
+
+        console.log("数组中和是" + a + "数组中最大值是" + j + "数组最小值是" + p);
+
+
+    }
+    element(arr)
+</script>
+
+</html>

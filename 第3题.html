@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="按钮" id="btn">
+    <div class="biaoQ">
+        <ul>
+
+
+        </ul>
+    </div>
+</body>
+<script>
+    var btn = document.getElementById('btn');
+    console.log (btn )
+    var ul =document.getElementsByTagName("ul")[0]
+    console.log(ul);
+    
+   btn.onclick=function(){
+       for(var i=1;i<6;i++){
+           
+          var p1=document.createElement("li");
+           p1.innerText="我是第"+i+"个球队"
+        //    p1.onmouseover=function(){
+
+        //     p1.style.background="greenyellow"
+
+        //    }
+           ul.appendChild(p1);
+           //ul.appendChild ( p1 )
+       }
+       var liList =document.getElementsByTagName("li")
+       for(var j=0;j<liList.length;j++){
+           console.log(j);
+           
+          liList[j].onmouseover=function(){
+                this.defaultColor = this.style.background;
+               this.style.background="red"
+           }
+           liList[j].onmouseout=function(){
+            this.style.background = this.defaultColor;
+           }
+       }
+       
+   }
+  
+    
+</script>
+</html>
